@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_0fr9mxs" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
+  <bpmn:process id="mommy-update-product" name="Обновление продукта" isExecutable="true">
+    <bpmn:endEvent id="EndEvent_0x6ir2l">
+      <bpmn:incoming>Flow_1qffsn2</bpmn:incoming>
+      <bpmn:incoming>Flow_0jd3zzj</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0woyvge" sourceRef="Activity_1e8eyhr" targetRef="Activity_0uhih6q" />
+    <bpmn:serviceTask id="Activity_1e8eyhr" name="Обновить продукт" camunda:delegateExpression="${updateProduct}">
+      <bpmn:incoming>Flow_0fibslw</bpmn:incoming>
+      <bpmn:outgoing>Flow_0woyvge</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Activity_0uhih6q" name="Отображение обновленного продукта" camunda:formKey="camunda-forms:/forms/result.form">
+      <bpmn:incoming>Flow_0woyvge</bpmn:incoming>
+      <bpmn:outgoing>Flow_1qffsn2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1qffsn2" sourceRef="Activity_0uhih6q" targetRef="EndEvent_0x6ir2l" />
+    <bpmn:sequenceFlow id="Flow_1tztkxl" sourceRef="StartEvent_1" targetRef="Activity_0qotljh" />
+    <bpmn:startEvent id="StartEvent_1" name="Обновить продукт">
+      <bpmn:outgoing>Flow_1tztkxl</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:boundaryEvent id="Event_0bjsnwk" attachedToRef="Activity_1e8eyhr">
+      <bpmn:outgoing>Flow_0cmchqi</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_1xbczbc" />
+    </bpmn:boundaryEvent>
+    <bpmn:sequenceFlow id="Flow_0jd3zzj" sourceRef="Activity_0m8sni0" targetRef="EndEvent_0x6ir2l" />
+    <bpmn:sequenceFlow id="Flow_0cmchqi" sourceRef="Event_0bjsnwk" targetRef="Activity_0m8sni0" />
+    <bpmn:userTask id="Activity_0m8sni0" name="Процесс обновления продукта завершился с ошибкой" camunda:formKey="camunda-forms:/forms/error.form">
+      <bpmn:incoming>Flow_0cmchqi</bpmn:incoming>
+      <bpmn:outgoing>Flow_0jd3zzj</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0fibslw" sourceRef="Activity_0qotljh" targetRef="Activity_1e8eyhr" />
+    <bpmn:userTask id="Activity_0qotljh" name="Заполнить форму обновления продукта" camunda:formKey="camunda-forms:/forms/updateProduct.form">
+      <bpmn:incoming>Flow_1tztkxl</bpmn:incoming>
+      <bpmn:outgoing>Flow_0fibslw</bpmn:outgoing>
+    </bpmn:userTask>
+  </bpmn:process>
+  <bpmn:error id="Error_1wo6a3f" name="warriorsError" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="mommy-update-product">
+      <bpmndi:BPMNShape id="EndEvent_0x6ir2l_di" bpmnElement="EndEvent_0x6ir2l">
+        <dc:Bounds x="902" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_060a66o_di" bpmnElement="Activity_1e8eyhr">
+        <dc:Bounds x="510" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0y2gw2j_di" bpmnElement="Activity_0uhih6q">
+        <dc:Bounds x="680" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="172" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="165" y="145" width="51" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1s564aa_di" bpmnElement="Activity_0m8sni0">
+        <dc:Bounds x="540" y="220" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0icjv03_di" bpmnElement="Activity_0qotljh">
+        <dc:Bounds x="310" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0hp91ch_di" bpmnElement="Event_0bjsnwk">
+        <dc:Bounds x="572" y="142" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0woyvge_di" bpmnElement="Flow_0woyvge">
+        <di:waypoint x="610" y="120" />
+        <di:waypoint x="680" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1qffsn2_di" bpmnElement="Flow_1qffsn2">
+        <di:waypoint x="780" y="120" />
+        <di:waypoint x="902" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1tztkxl_di" bpmnElement="Flow_1tztkxl">
+        <di:waypoint x="208" y="120" />
+        <di:waypoint x="310" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0jd3zzj_di" bpmnElement="Flow_0jd3zzj">
+        <di:waypoint x="640" y="260" />
+        <di:waypoint x="920" y="260" />
+        <di:waypoint x="920" y="138" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0cmchqi_di" bpmnElement="Flow_0cmchqi">
+        <di:waypoint x="590" y="178" />
+        <di:waypoint x="590" y="220" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0fibslw_di" bpmnElement="Flow_0fibslw">
+        <di:waypoint x="410" y="120" />
+        <di:waypoint x="510" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

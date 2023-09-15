@@ -1,0 +1,63 @@
+{
+  "components": [
+    {
+      "label": "Введите адресс заказа:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0gd3mcy",
+        "columns": null
+      },
+      "id": "Field_0tgfqgh",
+      "key": "orderAdress",
+      "validate": {
+        "minLength": 1,
+        "maxLength": 256,
+        "required": true
+      }
+    },
+    {
+      "label": "Введите описание заказа",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1efxjhr",
+        "columns": null
+      },
+      "id": "Field_0apc2yn",
+      "key": "orderDescription"
+    },
+    {
+      "label": "Введите стоиомость заказа",
+      "type": "number",
+      "layout": {
+        "row": "Row_1nje85t",
+        "columns": null
+      },
+      "id": "Field_19hrolr",
+      "key": "orderPrice",
+      "validate": {
+        "required": true,
+        "max": 2147483647
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Оформить заказ",
+      "type": "button",
+      "layout": {
+        "row": "Row_1o2zt3t",
+        "columns": 3
+      },
+      "id": "Field_14yeafp",
+      "key": "field_00zvxjg"
+    }
+  ],
+  "type": "default",
+  "id": "order-form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 10
+}

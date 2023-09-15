@@ -1,0 +1,37 @@
+{
+  "components": [
+    {
+      "label": "У вас есть аккаунт?",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0lscikj",
+        "columns": 4
+      },
+      "id": "Field_08trvqo",
+      "key": "haveAccount",
+      "validate": {
+        "required": false
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Далее",
+      "type": "button",
+      "layout": {
+        "row": "Row_07r662q",
+        "columns": null
+      },
+      "id": "Field_17rpwkh",
+      "key": "field_0c1whb0"
+    }
+  ],
+  "type": "default",
+  "id": "is-registered-form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 10
+}

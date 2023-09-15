@@ -1,0 +1,79 @@
+{
+  "components": [
+    {
+      "label": "Введите логин:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_07yovsj",
+        "columns": null
+      },
+      "id": "Field_04xqzj4",
+      "key": "login",
+      "validate": {
+        "minLength": 3,
+        "maxLength": 256,
+        "required": true
+      }
+    },
+    {
+      "label": "Введите пароль:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0gd3mcy",
+        "columns": null
+      },
+      "id": "Field_0tgfqgh",
+      "key": "password",
+      "validate": {
+        "minLength": 3,
+        "maxLength": 256,
+        "required": true
+      },
+      "properties": {}
+    },
+    {
+      "values": [
+        {
+          "label": "Заказчик",
+          "value": "EMPLOYER"
+        },
+        {
+          "label": "Исполнитель",
+          "value": "EXECUTOR"
+        }
+      ],
+      "label": "Кем вы являетесь?",
+      "type": "select",
+      "layout": {
+        "row": "Row_1mgf83p",
+        "columns": null
+      },
+      "id": "Field_0t5yp3z",
+      "key": "role",
+      "defaultValue": "value",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Зарегестрироваться",
+      "type": "button",
+      "layout": {
+        "row": "Row_0xzm5tm",
+        "columns": null
+      },
+      "id": "Field_0dllh4t",
+      "key": "field_0np2nnn"
+    }
+  ],
+  "type": "default",
+  "id": "registration_form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 10
+}

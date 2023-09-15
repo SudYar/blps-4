@@ -1,0 +1,59 @@
+{
+  "components": [
+    {
+      "label": "Уведомления",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1z04scd",
+        "columns": null
+      },
+      "id": "Field_0tennaw",
+      "key": "notices",
+      "readonly": "true",
+      "disabled": true
+    },
+    {
+      "type": "number",
+      "layout": {
+        "row": "Row_0bhlsco",
+        "columns": 4
+      },
+      "id": "Field_1b3tlo4",
+      "key": "idForNext",
+      "description": "id выбранного заказа",
+      "validate": {
+        "max": 2147483647
+      }
+    },
+    {
+      "label": "Заказ выполнен",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0bhlsco",
+        "columns": 6
+      },
+      "id": "Field_1d81s6p",
+      "key": "isReady"
+    },
+    {
+      "action": "submit",
+      "label": "Далее",
+      "type": "button",
+      "layout": {
+        "row": "Row_1v30oyi",
+        "columns": 3
+      },
+      "id": "Field_1umlvkh",
+      "key": "field_1qwhu6r"
+    }
+  ],
+  "type": "default",
+  "id": "notice-and-finish",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 10
+}

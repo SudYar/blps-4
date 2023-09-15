@@ -1,0 +1,36 @@
+{
+  "components": [
+    {
+      "label": "Результат процесса:",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_01smsz1",
+        "columns": null
+      },
+      "id": "Field_1e9sq10",
+      "key": "result",
+      "readonly": true,
+      "disabled": true
+    },
+    {
+      "action": "submit",
+      "label": "Ок",
+      "type": "button",
+      "layout": {
+        "row": "Row_0vryut0",
+        "columns": 3
+      },
+      "id": "Field_0alp5px",
+      "key": "field_1tdfuu6"
+    }
+  ],
+  "type": "default",
+  "id": "result_form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 10
+}

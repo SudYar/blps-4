@@ -1,0 +1,79 @@
+{
+  "components": [
+    {
+      "label": "Уведомления",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1z04scd",
+        "columns": null
+      },
+      "id": "Field_0tennaw",
+      "key": "notices",
+      "readonly": "true",
+      "disabled": true
+    },
+    {
+      "type": "number",
+      "layout": {
+        "row": "Row_0bhlsco",
+        "columns": 4
+      },
+      "id": "Field_1b3tlo4",
+      "key": "idForNext",
+      "description": "id выбранного заказа",
+      "validate": {
+        "max": 2147483647
+      }
+    },
+    {
+      "label": "Подтверждаю выбор данного заказа",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0bhlsco",
+        "columns": 6
+      },
+      "id": "Field_1d81s6p",
+      "key": "isReady"
+    },
+    {
+      "type": "textfield",
+      "layout": {
+        "row": "Row_132pbmi",
+        "columns": 5
+      },
+      "id": "Field_0d1jr4x",
+      "key": "loginExecutor",
+      "description": "login Исполнителя"
+    },
+    {
+      "label": "Исполнитель выбран",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_132pbmi",
+        "columns": null
+      },
+      "id": "Field_1kspaxc",
+      "key": "isChoosen"
+    },
+    {
+      "action": "submit",
+      "label": "Далее",
+      "type": "button",
+      "layout": {
+        "row": "Row_1v30oyi",
+        "columns": 3
+      },
+      "id": "Field_1umlvkh",
+      "key": "field_1qwhu6r"
+    }
+  ],
+  "type": "default",
+  "id": "notice-and-choose",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 10
+}
