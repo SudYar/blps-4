@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_0fr9mxs" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.14.0">
-  <bpmn:process id="finish-work-process" name="Исполнитель выполняет работу" isExecutable="true">
+  <bpmn:process id="close-order-process" name="Закрытие запроса" isExecutable="true">
     <bpmn:endEvent id="EndEvent_0x6ir2l">
       <bpmn:incoming>Flow_06z2j7d</bpmn:incoming>
       <bpmn:incoming>Flow_0n15yut</bpmn:incoming>
@@ -77,7 +77,7 @@
   </bpmn:process>
   <bpmn:error id="Error_1wo6a3f" name="warriorsError" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
-    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="finish-work-process">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="close-order-process">
       <bpmndi:BPMNShape id="Activity_060a66o_di" bpmnElement="Activity_1e8eyhr">
         <dc:Bounds x="260" y="90" width="100" height="80" />
         <bpmndi:BPMNLabel />
