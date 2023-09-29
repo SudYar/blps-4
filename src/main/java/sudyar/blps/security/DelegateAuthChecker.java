@@ -30,7 +30,12 @@ public class DelegateAuthChecker {
         String token = TokenService.getUserToken(userId);
         if (token == null)
             throw new IllegalAccessException("Попробуйте авторизоваться еще раз. С вашим токеном что-то не так.");
-        jwtTokenFilter.doFilter(token);
+        try {
+            jwtTokenFilter.doFilter(token);
+        }catch (Exception e){
+            TokenService.putUserToken(userId, null);
+            throw new IllegalAccessException("Попробуйте авторизоваться еще раз. С вашим токеном что-то не так.");
+        }
 
         List<String> userRoles = SecurityContextHolder.getContext().getAuthentication()
                 .getAuthorities().stream().map(GrantedAuthority::getAuthority).toList();

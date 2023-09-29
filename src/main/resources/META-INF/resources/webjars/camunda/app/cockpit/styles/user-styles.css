@@ -1,0 +1,9 @@
+.navbar-brand .brand-logo {
+    /* put your logo */
+    background-image: url(../assets/images/cat-logo.png);
+    /* sets the width to match the logo's width */
+    width: 40px;
+}
+[cam-widget-header] .navbar-brand .brand-logo svg {
+    width: 0;
+}
